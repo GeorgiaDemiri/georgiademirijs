@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+var sum=o;
+
+for (i=1; j=1;j<=10000;i+2;j=++1)
+{j=sum+j;
+i=i+2;}
+console.log(j-1);
+</script>
+</head>
+</html> 
