@@ -1,4 +1,29 @@
 #viewName{
     color: red;}
     #viewLocation{color:green;}
-    
+#fieldset {
+        color: #6E3F19;
+        font-size:1.2 em;
+        font-weight: bold;
+        background: #F5F5DC;
+      } 
+      /*....*/
+      <fieldset id="fieldset">
+        /*your code goes here*/
+      </fieldset>
+    }
+    input[type=submit] {
+        width: 16%;
+        background-color: #6E3F19;
+        color: #F5F5DC;
+        padding: 14px 5px 14px 5px; 
+        border-style : 2px dashed; 
+        border-color: rgb(162, 101, 52);
+        border-radius:18px;
+       }   
+       .required label:after { content:"*"; }
+       .required p:after { content:"*"; }
+       /*...*/
+       <div class="required">
+         /*The label and input elements*/
+       <div>

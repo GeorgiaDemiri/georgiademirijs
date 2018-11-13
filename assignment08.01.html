@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>The HTML of Forms </title>
+    </head>
+    <body >
+        <h3>The HTML of Forms </h3>
+ 
+        <form  >
+            <fieldset>
+                <legend>
+                    Please, fill in the following information:
+                </legend>
+                <label for="firstname">First name:</label> 
+                    <input type="text" name="firstname" id="firstname" 
+                        placeholder="Your name goes here" 
+                        size="25" autofocus="autofocus" required/> <br><br>
+                <label for="secretword">Your password:</label> 
+                    <input type="password" name="secretword" id="secretword" 
+                        placeholder="Your password goes here" 
+                        size="25"  required/><br><br>
+                <p>Please enter any feedback you have.</p>
+                <textarea name="feedback"    
+                    rows="3" cols="60" required>
+                </textarea>
+            </fieldset>    <br><br>
+            <label for="submit">Click to submit: </label> 
+                <input type="submit" id="submit"/> <br><br>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Form validation </title>
+    <style>
+        h3 {
+                color: #6E3F19;
+                font-size:1.6em;
+            }
+            #fieldset {
+                color: #6E3F19;
+                font-size:1.2 em;
+                font-weight: bold;
+                background: #F5F5DC;
+            }  
+            input[type=submit] {
+                width: 16%;
+                background-color: #6E3F19;
+                color: #F5F5DC;
+                padding: 14px 5px 14px 5px; 
+               
+                border-style : 2px dashed; 
+                border-color: rgb(162, 101, 52);
+                border-radius:18px;
+            }
+            .required label:after { content:"*"; }
+            .required p:after { content:"*"; }
+        </style>
+</head>
+
+<body>
+    <h3>Assignment08 </h3>
+
+    <form id="form">
+        <fieldset id="fieldset">
+            <legend>Contact information</legend><br />
+            <div class="required">
+                <label for="Name">Name:</label>
+                <input type="text" name="Name" id="Name" class="required" placeholder="Your name goes here" autofocus="autofocus"
+                    minlength="4" required />
+                <span id="NameInfo"></span>
+            </div>
+            <br>
+
+            <div class="notrequired">
+                <label for="contact"> Can we contact you?</label><br>
+
+                <input type="radio" name="Choice" value="No"  onclick="DemoDisplay0()">No<br>
+                <input type="radio" name="Choice" value="Yes" checked onclick="DemoDisplay1()">Yes<br>
+
+            </div>
+
+            <div id="myDiv">
+                <p>Please, give us your email:</p>
+
+                <div class="required">
+                    <label for="mail">Your email:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Your email goes here" required />
+                    <span id="mailInfo"></span>
+                </div>
+            </div>
+            <br>
+
+        </fieldset> <br>
+        <label for="submit">Click to submit: </label> <input type="submit" id="submit" /> <br>
+    </form>
+
+    <script>
+        "use strict";
+        var myform = document.getElementById("form");
+        var myfieldset = document.getElementById("fieldset");
+        var myName = document.getElementById("Name");
+        var myNameInfo = document.getElementById("NameInfo");
+        var mymail = document.getElementById("mail");
+        var mymailInfo = document.getElementById("mailInfo");
+
+        myName.oninput = function () {
+            if (!this.validity.valid) {
+                myName.style.backgroundImage = "url(images/invalid.png) ";
+                myName.style.backgroundRepeat = " no-repeat";
+                myName.style.backgroundPosition = " right top";
+                myNameInfo.innerHTML = "Your name is too small.";
+            }
+            else {
+                myName.style.backgroundImage = "url(images/valid.png) ";
+                myName.style.backgroundRepeat = " no-repeat";
+                myName.style.backgroundPosition = " right top";
+                myNameInfo.style.display = "none";
+            }
+        }
+        function DemoDisplay0() { document.getElementById("myDiv").style.visibility = "hidden"; }
+        function DemoDisplay1() { document.getElementById("myDiv").style.visibility = "visible"; }
+
+
+        mymail.oninput = function () {
+            if (!this.validity.valid) {
+                mymail.style.border = "solid 3px red";
+                mymailInfo.innerHTML = "Your email must be in the correct format. ";
+            }
+
+            else {
+                mymail.style.borderColor = "green";
+                mymailInfo.style.display = "none"
+            }
+        }
+    </script>
+</body>
+
+</html>
