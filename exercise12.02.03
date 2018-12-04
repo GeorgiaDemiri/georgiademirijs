@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Access Object Properties</title>
+</head>
+<body>
+    <H1>Access Object Properties</H1>
+    
+<script>
+    var darkChoco = {
+        cacao:"80%",
+        milk:"0%", 
+        grams:100
+    };
+    var myChoco = "grams";
+    document.write("cacao: " + darkChoco.cacao + " , milk: " + darkChoco["milk"] + " and grams: " + darkChoco[myChoco] );
+</script>
+</body>
+</html>
