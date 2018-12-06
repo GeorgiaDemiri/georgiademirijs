@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructor syntax</title>
+</head>
+<body>
+    <h1>Constructor syntax</h1>
+    <script>
+      function myClassmates(n, a, j, nat){
+          this.name=n;
+          this.age=a;
+          this.job=j;
+          this.nationality=nat
+          ;}
+    var first = new myClassmates ("George", "20", "Programmer", "Greek");
+    var second = new myClassmates ("Dimitra", "25", "Designer", "Italian");
+        
+     document.write("First Classmate: "+first.name+ ", Age: " +first.age+ ", Job: " +first.job+  ", Nationality: " +first.nationality) ;
+     document.write("<br>");
+     document.write("Second Classmate: "+second.name+ ", Age: " +second.age+ ", Job: " +second.job+ ", Nationality: " +second.nationality);
+      console.log(first.name, first.age, first.job, first.nationality) // Use the new keyword to define two new objects via the Construction function
+       
+       
+       // Use the document.write to appear these objects to the browser
+
+       
+       //Iterate over the first object to extract its values to the console
+       // https://elearn.ellak.gr/mod/book/view.php?id=4331&chapterid=2325
+       
+
+    </script>
+</body>
+</html> 
